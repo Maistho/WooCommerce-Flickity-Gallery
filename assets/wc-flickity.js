@@ -46,7 +46,25 @@ jQuery(function() {
 		var g_titles = gallery.titles.slice(cellIndex).concat( gallery.titles.slice(0, cellIndex) );
 		var g_descriptions = gallery.descriptions.slice(cellIndex).concat( gallery.descriptions.slice(0, cellIndex) );
 
-		jQuery.prettyPhoto.open( g_images, g_titles, g_descriptions );
+		var lg_images = [];
+		var thumbs = $slider_nav.find('img');
+		for (var i = 0; i < g_images.length; ++i) {
+			lg_images.push({
+				thumb: thumbs[i].src,
+				src: gallery.images[i],
+				subHtml: '<h4>'+gallery.titles[i]+'</h4><p>'+gallery.descriptions[i]+'</p>',
+			});
+		}
+		lightGallery(cellElement, {
+			dynamic: true,
+			dynamicEl: lg_images,
+			index: cellIndex,
+			backdropDuration: 300,
+			toolbar: false,
+			counter: false,
+			download: false,
+			toggleThumb: false,
+		});
 	});
 
 
