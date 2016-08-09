@@ -60,10 +60,10 @@ jQuery(function() {
 			dynamicEl: lg_images,
 			index: cellIndex,
 			backdropDuration: 300,
-			toolbar: false,
+			toolbar: true,
 			counter: false,
 			download: false,
-			toggleThumb: false,
+			toogleThumb: false,
 		});
 	});
 

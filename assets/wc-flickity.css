@@ -16,7 +16,6 @@
 }
 
 .woocommerce div.product div.images .wcfg-primary-gallery a img {
-	max-height: 450px;
 }
 
 /* Flexbox for vertically centered images */
@@ -34,4 +33,15 @@
 
 .woocommerce div.images div.wcfg-nav-gallery a.is-nav-selected {
 	box-shadow: inset 0 0 0 3px #AD5800;
+}
+
+.flickity-prev-next-button {
+	padding: 0;
+}
+
+.lg-backdrop {
+	background-color: #FFF;
+}
+.lg-backdrop.in {
+	opacity: .7;
 }
